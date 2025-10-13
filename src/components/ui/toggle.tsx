@@ -28,6 +28,14 @@ const toggleVariants = cva(
   }
 )
 
+/**
+ * Renders a styled Toggle control built on Radix UI's Toggle primitive.
+ *
+ * @param variant - Visual variant of the toggle; affects border, background, and hover styling.
+ * @param size - Size variant; adjusts height, horizontal padding, and minimum width.
+ * @param className - Additional class names merged with the component's generated classes.
+ * @returns The Toggle root element with the selected styling variants and any forwarded props.
+ */
 function Toggle({
   className,
   variant,

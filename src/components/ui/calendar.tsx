@@ -11,6 +11,20 @@ import { DayButton, DayPicker, getDefaultClassNames } from "react-day-picker"
 import { cn } from "@/lib/utils"
 import { Button, buttonVariants } from "@/components/ui/button"
 
+/**
+ * A themed Calendar component that renders a highly-customized DayPicker with accessible defaults and style integrations.
+ *
+ * Renders a DayPicker configured with preset class names, RTL adjustments, a short-month dropdown formatter, and custom subcomponents for Root, Chevron, DayButton, and WeekNumber.
+ *
+ * @param className - Additional container class names applied to the calendar root.
+ * @param classNames - Overrides for DayPicker part class names; merged with the component's defaults.
+ * @param showOutsideDays - Whether to display days from adjacent months; defaults to `true`.
+ * @param captionLayout - Caption layout for the month header; defaults to `"label"`.
+ * @param buttonVariant - Variant applied to the previous/next navigation buttons.
+ * @param formatters - Additional DayPicker formatters to merge with the built-in short-month formatter.
+ * @param components - Component overrides to merge with the built-in subcomponent implementations.
+ * @returns A JSX element rendering the configured DayPicker calendar.
+ */
 function Calendar({
   className,
   classNames,
@@ -172,6 +186,16 @@ function Calendar({
   )
 }
 
+/**
+ * Render a calendar day as an interactive button that reflects selection, range, and focus states.
+ *
+ * Adds data attributes for single selection, range start/middle/end, and a locale date string; auto-focuses when `modifiers.focused` is true and forwards remaining DayButton props.
+ *
+ * @param className - Additional CSS class names to apply to the button
+ * @param day - Day object from react-day-picker; used to populate the `data-day` attribute
+ * @param modifiers - Modifier flags from react-day-picker that determine selection, range, and focus states
+ * @returns The rendered day Button element with appropriate state attributes and forwarded props
+ */
 function CalendarDayButton({
   className,
   day,

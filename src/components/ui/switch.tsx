@@ -5,6 +5,15 @@ import * as SwitchPrimitive from "@radix-ui/react-switch"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * Render a styled Switch component that wraps Radix UI's Switch primitive.
+ *
+ * Forwards all valid SwitchPrimitive.Root props to the underlying element and
+ * composes provided `className` with the component's base styles.
+ *
+ * @param className - Additional CSS class names to apply to the root element
+ * @returns The JSX element for the styled switch
+ */
 function Switch({
   className,
   ...props
