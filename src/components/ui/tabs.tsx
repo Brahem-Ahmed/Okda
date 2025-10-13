@@ -5,6 +5,14 @@ import * as TabsPrimitive from "@radix-ui/react-tabs"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * Render a Tabs root element with preset layout classes.
+ *
+ * Applies the default layout classes ("flex flex-col gap-2") and merges any provided `className`.
+ *
+ * @param className - Additional CSS class names to append to the default classes
+ * @returns A React element representing the Tabs root
+ */
 function Tabs({
   className,
   ...props
@@ -18,6 +26,11 @@ function Tabs({
   )
 }
 
+/**
+ * Renders a styled tabs list using Radix UI's TabsPrimitive.List.
+ *
+ * @returns A TabsPrimitive.List element with default list styling; any `className` and other props are merged into the rendered element.
+ */
 function TabsList({
   className,
   ...props
@@ -34,6 +47,12 @@ function TabsList({
   )
 }
 
+/**
+ * A styled Tabs trigger component that renders a Radix Tabs trigger with preset classes and a data-slot.
+ *
+ * @param className - Additional class names to merge with the component's default styling
+ * @returns The rendered trigger element with the composed `className` and all forwarded props
+ */
 function TabsTrigger({
   className,
   ...props
@@ -50,6 +69,12 @@ function TabsTrigger({
   )
 }
 
+/**
+ * Renders a styled tab content panel for use within the Tabs component.
+ *
+ * @param className - Additional CSS classes to merge with the component's default "flex-1 outline-none" styles
+ * @returns The underlying TabsPrimitive.Content element with default styling and `data-slot="tabs-content"`
+ */
 function TabsContent({
   className,
   ...props

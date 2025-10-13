@@ -21,6 +21,12 @@ const buttonGroupVariants = cva(
   }
 )
 
+/**
+ * Renders a styled container that groups related interactive elements and applies orientation-specific layout.
+ *
+ * @param orientation - Layout orientation of the group; `"horizontal"` or `"vertical"`. Defaults to `"horizontal"`.
+ * @returns A JSX `div` element with role="group", a data-orientation attribute, and orientation-aware styling.
+ */
 function ButtonGroup({
   className,
   orientation,
@@ -37,6 +43,12 @@ function ButtonGroup({
   )
 }
 
+/**
+ * Renders styled text content for a ButtonGroup, using a Slot when `asChild` is true.
+ *
+ * @param asChild - If true, render a Radix `Slot` so the caller can control the element; otherwise render a `div`.
+ * @returns The rendered element containing the button group text.
+ */
 function ButtonGroupText({
   className,
   asChild = false,
@@ -57,6 +69,13 @@ function ButtonGroupText({
   )
 }
 
+/**
+ * Render a styled separator to be used inside a ButtonGroup.
+ *
+ * @param className - Additional class names to merge with the separator's base styles
+ * @param orientation - Layout orientation, either `"vertical"` or `"horizontal"`. Defaults to `"vertical"`.
+ * @returns A `Separator` element configured for use within a ButtonGroup
+ */
 function ButtonGroupSeparator({
   className,
   orientation = "vertical",

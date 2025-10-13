@@ -1,5 +1,13 @@
 import { cn } from "@/lib/utils"
 
+/**
+ * Render a styled keyboard key element.
+ *
+ * The component renders a <kbd> element with a data-slot of `"kbd"` and a set of preset utility classes; any additional `className` is appended and remaining props are spread onto the element.
+ *
+ * @param className - Additional CSS classes to append to the component's default classes
+ * @returns A React `<kbd>` element with applied styling and `data-slot="kbd"`
+ */
 function Kbd({ className, ...props }: React.ComponentProps<"kbd">) {
   return (
     <kbd
@@ -15,6 +23,11 @@ function Kbd({ className, ...props }: React.ComponentProps<"kbd">) {
   )
 }
 
+/**
+ * Renders a container for a sequence of keyboard key elements.
+ *
+ * @returns A `<kbd>` element with `data-slot="kbd-group"`, the `inline-flex items-center gap-1` layout classes, and any provided props and `className` forwarded to the element.
+ */
 function KbdGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <kbd
